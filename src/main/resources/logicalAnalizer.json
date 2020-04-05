@@ -1,0 +1,40 @@
+{
+	"attributes":[ "Revenue","Paid Users","MAU","Retention Rate","Test" ],
+	"objects":[ "PicsArt","LightTricks","VSCO" ],
+	"companies": [
+		{
+			"name": "Picsart",
+			"revenue": 100,
+			"paidusers": 200,
+			"mau": 150,
+			"urr": 30,
+			"test": 10
+		},
+		{
+			"name": "VSCO",
+			"revenue": 300,
+			"paidusers": 200,
+			"mau": 150,
+			"urr": 30,
+			"test": 10
+		},
+		{
+			"name": "LightTricks",
+			"revenue": 100,
+			"paidusers": 200,
+			"mau": 150,
+			"urr": 30,
+			"test": 10
+		}
+
+	],
+	"attribute_comparing":{
+		"revenue" : 1,
+		"paidusers"	: 3	,
+		"mau" : 2,
+		"urr": 3,
+		"test": 4	
+	}
+}
+
+
