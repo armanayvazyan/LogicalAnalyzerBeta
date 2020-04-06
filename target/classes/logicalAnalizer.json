@@ -4,7 +4,7 @@
 	"companies": [
 		{
 			"name": "Picsart",
-			"revenue": 100,
+			"revenue": 700,
 			"paidusers": 200,
 			"mau": 150,
 			"urr": 30,
@@ -12,7 +12,7 @@
 		},
 		{
 			"name": "VSCO",
-			"revenue": 300,
+			"revenue": 600,
 			"paidusers": 200,
 			"mau": 150,
 			"urr": 30,
