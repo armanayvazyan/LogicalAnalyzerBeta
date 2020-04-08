@@ -79,5 +79,13 @@ public class Companies {
     public void setTest(int test) {
         this.test = test;
     }
+
+    public int getUrr() {
+        return urr;
+    }
+
+    public void setUrr(int urr) {
+        this.urr = urr;
+    }
 }
 

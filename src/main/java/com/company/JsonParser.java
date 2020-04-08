@@ -22,7 +22,7 @@ public class  JsonParser{
 
 
         public void convertToJson() throws IOException {
-        FileReader reader = new FileReader("C:\\Users\\37441\\IdeaProjects\\LogicalAnalyzerBeta\\src\\main\\resources\\logicalAnalizer.json");
+        FileReader reader = new FileReader("C:\\Users\\manch\\IdeaProjects\\vacho\\src\\main\\resources\\logicalAnalizer.json");
         ObjectMapper mapper = new ObjectMapper();
         JsonNode node =  mapper.readTree(reader);
 

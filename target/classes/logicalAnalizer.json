@@ -4,25 +4,28 @@
 	"companies": [
 		{
 			"name": "Picsart",
-			"revenue": 700,
-			"paidusers": 200,
-			"mau": 150,
-			"urr": 30,
-			"test": 10
+			"imgUrl": "picsart.png",
+			"revenue": 100,
+			"paidusers": 700,
+			"mau": 1,
+			"urr": 10,
+			"test": 40
 		},
 		{
 			"name": "VSCO",
-			"revenue": 600,
-			"paidusers": 200,
-			"mau": 150,
-			"urr": 30,
-			"test": 10
+			"imgUrl": "vsco.png",
+			"revenue": 220,
+			"paidusers": 1200,
+			"mau": 20,
+			"urr": 20,
+			"test": 30
 		},
 		{
 			"name": "LightTricks",
-			"revenue": 100,
-			"paidusers": 200,
-			"mau": 150,
+			"imgUrl": "lighttricks.png",
+			"revenue": 300,
+			"paidusers": 300,
+			"mau": 13,
 			"urr": 30,
 			"test": 10
 		}
