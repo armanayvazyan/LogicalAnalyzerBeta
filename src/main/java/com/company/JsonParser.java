@@ -9,40 +9,43 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class JsonParser {
+class JsonParser {
     private ArrayList<Attribute> attributeList;
-    private ArrayList<Companie> companieList;
+    private ArrayList<Company> companyList;
 
-    public void convertToJson() throws IOException {
+    void convertToJson() throws IOException {
         FileReader reader = new FileReader("/Users/artomaranjyan/IdeaProjects/LogicalAnalyzerBeta/src/main/resources/logicalAnalizer.json");
         ObjectMapper mapper = new ObjectMapper();
         JsonNode node = mapper.readTree(reader);
 
-        attributeList = new ArrayList<Attribute>();
-        for (int i = 0; i < node.path("attribute_comparing").size(); i++) {
-            attributeList.add(new Attribute(node.path("attribute_comparing").get(i).asText()));
-        }
+        attributeList = new ArrayList<>();
+        Collections.addAll(attributeList,
+                new Attribute("revenue", node.path("attribute_comparing").path("revenue").asInt()),
+                new Attribute("paidusers", node.path("attribute_comparing").path("paidusers").asInt()),
+                new Attribute("mau", node.path("attribute_comparing").path("mau").asInt()),
+                new Attribute("urr", node.path("attribute_comparing").path("urr").asInt()),
+                new Attribute("test", node.path("attribute_comparing").path("test").asInt()));
 
-        companieList = new ArrayList<Companie>();
+        companyList = new ArrayList<>();
         for (int i = 0; i < node.path("companies").size(); i++) {
             String name = node.path("companies").get(i).path("name").asText();
             Attribute revenue = new Attribute("revenue", node.path("companies").get(i).path("revenue").asInt());
-            Attribute paidusers = new Attribute("paidusers", node.path("companies").get(i).path("paidusers").asInt());
+            Attribute paidUsers = new Attribute("paidusers", node.path("companies").get(i).path("paidusers").asInt());
             Attribute mau = new Attribute("mau", node.path("companies").get(i).path("mau").asInt());
             Attribute urr = new Attribute("urr", node.path("companies").get(i).path("urr").asInt());
             Attribute test = new Attribute("test", node.path("companies").get(i).path("test").asInt());
             ArrayList<Attribute> attributes = new ArrayList<Attribute>();
-            Collections.addAll(attributes, revenue, paidusers, mau, urr, test);
+            Collections.addAll(attributes, revenue, paidUsers, mau, urr, test);
 
-            companieList.add(new Companie(name, i + 1, attributes);
+            companyList.add(new Company(name, i + 1, attributes));
         }
     }
 
-    public ArrayList<Attribute> getAttributeList() {
+    ArrayList<Attribute> getAttributeList() {
         return attributeList;
     }
 
-    public ArrayList<Companie> getCompanieList() {
-        return companieList;
+    ArrayList<Company> getCompaniesList() {
+        return companyList;
     }
 }

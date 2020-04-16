@@ -5,7 +5,7 @@ public class Attribute {
     int value;
     boolean checked = true;
 
-    public boolean isChecked() {
+    boolean isChecked() {
         return checked;
     }
 
@@ -25,7 +25,7 @@ public class Attribute {
         this.name = name;
     }
 
-    public Attribute(String name, int value) {
+    Attribute(String name, int value) {
         this.name = name;
         this.value = value;
     }
