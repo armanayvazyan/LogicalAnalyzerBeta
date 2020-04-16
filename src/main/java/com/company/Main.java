@@ -23,7 +23,20 @@ public class Main {
         }
 
         System.out.println("ATTRIBUTES");
-        AnaliseWithGivenParameters(attributeList);
+        double[] pp = AnaliseWithGivenParameters(attributeList);
+
+        double[] finalResults = new double[companiesList.size()];
+        for (int i = 0; i < companiesList.size(); i++) {
+            finalResults[i] = 0;
+            for (int j = 0; j < attributeList.size(); j++) {
+                finalResults[i] += pp[j] * p[i][j];
+            }
+        }
+
+        System.out.println();
+        for (double q : finalResults) {
+            System.out.print(q + " ");
+        }
     }
 }
 
