@@ -21,6 +21,9 @@ public class Main {
         for (Attribute attribute : attributeList) {
             p[k++] = AnaliseWithGivenParameters(companiesList, attribute);
         }
+
+        System.out.println("ATTRIBUTES");
+        AnaliseWithGivenParameters(attributeList);
     }
 }
 

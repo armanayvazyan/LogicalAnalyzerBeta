@@ -5,6 +5,10 @@ public class Attribute {
     int value;
     boolean checked = true;
 
+    public int getValue() {
+        return value;
+    }
+
     boolean isChecked() {
         return checked;
     }
