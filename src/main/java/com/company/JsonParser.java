@@ -14,7 +14,7 @@ class JsonParser {
     private ArrayList<Company> companyList;
 
     void convertToJson() throws IOException {
-        FileReader reader = new FileReader("/Users/artomaranjyan/IdeaProjects/LogicalAnalyzerBeta/src/main/resources/logicalAnalizer.json");
+        FileReader reader = new FileReader("src/main/resources/logicalAnalizer.json");
         ObjectMapper mapper = new ObjectMapper();
         JsonNode node = mapper.readTree(reader);
 

@@ -44,28 +44,7 @@ class Analyser {
             PNRelative[i] = p[i] / sum;
         }
 
-        System.out.println();
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                System.out.print(array2D[i][j] + " ");
-            }
-            System.out.println();
-        }
-        System.out.println();
-        for (int i = 0; i < size; i++) {
-            System.out.print(result[i] + " ");
-        }
 
-        System.out.println();
-        for (int i = 0; i < size; i++) {
-            System.out.print(p[i] + " ");
-        }
-
-        System.out.println();
-        for (int i = 0; i < size; i++) {
-            System.out.print(PNRelative[i] + " ");
-        }
-        System.out.println();
         return PNRelative;
     }
 
@@ -109,28 +88,6 @@ class Analyser {
             PNRelative[i] = p[i] / sum;
         }
 
-        System.out.println();
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                System.out.print(array2D[i][j] + " ");
-            }
-            System.out.println();
-        }
-        System.out.println();
-        for (int i = 0; i < size; i++) {
-            System.out.print(result[i] + " ");
-        }
-
-        System.out.println();
-        for (int i = 0; i < size; i++) {
-            System.out.print(p[i] + " ");
-        }
-
-        System.out.println();
-        for (int i = 0; i < size; i++) {
-            System.out.print(PNRelative[i] + " ");
-        }
-        System.out.println();
         return PNRelative;
     }
 }

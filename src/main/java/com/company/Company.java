@@ -26,5 +26,13 @@ class Company {
         this.id = id;
         this.attributes = attributes;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
 

@@ -26,6 +26,15 @@
       "mau": 13,
       "urr": 30,
       "test": 10
+    },
+    {
+      "name": "TurboDance",
+      "imgUrl": "lighttricks.png",
+      "revenue": 1000,
+      "paidusers": 1300,
+      "mau": 18,
+      "urr": 90,
+      "test": 10
     }
   ],
   "attribute_comparing": {

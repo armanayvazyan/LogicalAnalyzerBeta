@@ -22,20 +22,31 @@ public class Main {
             p[k++] = AnaliseWithGivenParameters(companiesList, attribute);
         }
 
-        System.out.println("ATTRIBUTES");
         double[] pp = AnaliseWithGivenParameters(attributeList);
 
         double[] finalResults = new double[companiesList.size()];
+
         for (int i = 0; i < companiesList.size(); i++) {
             finalResults[i] = 0;
             for (int j = 0; j < attributeList.size(); j++) {
-                finalResults[i] += pp[j] * p[i][j];
+                finalResults[i] += pp[j] * p[j][i];
             }
         }
-
+        System.out.println("WINNING COMPANY NAME");
         System.out.println();
-        for (double q : finalResults) {
-            System.out.print(q + " ");
+        double max = finalResults[0];;
+        for (int i = 0; i < finalResults.length; i++) {
+            if(i>0){
+                if(finalResults[i] > max)
+                    max = finalResults[i];
+            }
+        }
+        int index =0;
+        for(double q : finalResults){
+            if(q == max){
+                System.out.println(companiesList.get(index).getName());
+            } else
+                index++;
         }
     }
 }
